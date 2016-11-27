@@ -6,7 +6,7 @@
 #include<ctype.h>
 int main() {
 
-        
+
         int numOfFails=0;
         char array[10];
         char changedArray[10];
@@ -22,13 +22,11 @@ int main() {
     	num = rand() % 10;
         for(int i=0;i<10;i++)
         {
-           
-            
             array[i]=stringArray[num][i];
             printf("%c",array[i]);
         }
         printf("\n\n");
-        
+
     //Przygotowanie changedArray
         for(int i=0;i<10;i++)
         {
@@ -41,7 +39,7 @@ int main() {
         while((numOfFails<7)&&!((changedArray[0]!='*')&&(changedArray[1]!='*')&&(changedArray[2]!='*')&&(changedArray[3]!='*')&&(changedArray[4]!='*')&&
 			(changedArray[5]!='*')&&(changedArray[6]!='*')&&(changedArray[7]!='*')&&(changedArray[8]!='*')&&(changedArray[9]!='*')))
         {
-            
+
             printf("Podaj litere: ");
         //sprawdzanie czy wprowadzana jest liczba
             do
@@ -50,8 +48,8 @@ int main() {
                 if(!(isalpha(letter))){printf("To nie jest dopuszczalny znak!!\n");printf("Podaj litere: ");}
             }
             while(!(isalpha(letter)));
-            
-            
+
+
             for(int i=0;i<10;i++)
             {
                 if(letter==array[i])
@@ -59,12 +57,12 @@ int main() {
                     flag=true;
                     changedArray[i]=letter;
                 }
-                
+
             }
-            
+
             if(flag==true)
             {
-                
+
                 flag=false;
             }
             else
@@ -141,15 +139,15 @@ int main() {
                     default:
                         break;
                 }
-                
+
             }
-            
+
             for(int i=0;i<10;i++)
             {
                 printf("%c ",changedArray[i]);
             }
             printf("\n\n");
-            
+
         }
     if(numOfFails==7)
     {
@@ -161,7 +159,6 @@ int main() {
         }
     	printf("\n");
 	 	printf("-------------------------------\n");
-            
     }
     else
 	{
@@ -169,6 +166,3 @@ int main() {
  		printf("Zwyciestwo!!\n");
 		printf("-------------\n");
 	}
-}
-    
-
